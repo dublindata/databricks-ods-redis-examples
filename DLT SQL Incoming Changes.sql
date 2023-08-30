@@ -33,4 +33,4 @@ SELECT * FROM STREAM(LIVE.incoming_ods_changes) WHERE last_updated > current_dat
 -- MAGIC
 -- MAGIC With the code defined in this notebook, we can turn around and build our DLT pipeline in Databricks:
 -- MAGIC
--- MAGIC ![image info](img/DLT.png)
+-- MAGIC ![DLT Pipeline](https://raw.githubusercontent.com/dublindata/databricks-ods-redis-examples/main/img/Workflow.png)

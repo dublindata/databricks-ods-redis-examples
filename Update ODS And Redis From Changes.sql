@@ -93,4 +93,4 @@ WHEN NOT MATCHED THEN
 -- MAGIC
 -- MAGIC Now that we have a process to processes incoming changes (with DLT) and a proceses that writes the changes to our Lakehouse tables and updates Redis, we can build a workflow to run on a schedule (or continuous) to grab changes, proces them, and update our Redis cache:
 -- MAGIC
--- MAGIC ![Workflow](img/Workflow)
+-- MAGIC ![Workflow](https://raw.githubusercontent.com/dublindata/databricks-ods-redis-examples/main/img/Workflow.png)
