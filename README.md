@@ -12,7 +12,7 @@ This repository shows an example of how you can build a process to ingest data (
 
 These notebooks are designed to show how changes can processed from a Delta Table/Unity Catalog/Hive Metastore source in a Databricks workspace. You can adjust the source tables to meet any data sources you want to try this with. You should also make sure you have the following set up:
 
-1. An Azure Redis Cache: You can use any Redis destination you want, but this demo was built on the Azure-managed Redis offering. 
+1. An Azure Redis Cache: You can use any Redis destination you want, but this demo was built on the Azure-managed Redis offering. You can learn more about the offering here: https://azure.microsoft.com/en-us/products/cache. Make sure you deploy or scale your deployment to meet your cache/size requirements.
 2. You will need a cluster to run the examples. Your cluster should be able to communicate with the Redis destination, which you can set via the Spark configuration of the cluster: 
 
         
@@ -21,7 +21,9 @@ These notebooks are designed to show how changes can processed from a Delta Tabl
         spark.redis.auth <your redis key>
         
         
-Note: By default, Azure Redis requires SSL and operates on a different default port; for exploration and testing, you may want to enable non-SSL to get up and running until you can properly configure SSL on your cluster.
+  * Note: By default, Azure Redis requires SSL and operates on a different default port; for exploration and testing, you may want to enable non-SSL to get up and running until you can properly configure SSL on your cluster.
+
+3. You will also need to make sure you install the spark-redis package on your cluster. You can do this via cluster libaries and using the Maven coordinate for the package: https://mvnrepository.com/artifact/com.redislabs/spark-redis_2.12/3.1.0
 
 ### Links
 
