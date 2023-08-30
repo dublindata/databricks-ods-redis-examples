@@ -8,6 +8,10 @@ This repository shows an example of how you can build a process to ingest data (
 * **DLT SQL Incoming Changes.sql** - This notebook is designed to show how you can read JSON files off of a cloud storage account, and write the incoming cata (whether they be changes or new records) to a Delta Live Table (which is used in the next notebook)
 * **Update ODS And Redis From Changes.sql** - This notebook, written in pure SQL, shows how using the changes ingested via the Delta Live Table process, the changes are persisted back to the table using a MERGE statement. The same changes are then sent to the Redis cache.
 
+## Cloning this repository
+
+You can clone this repository directly into your Databricks workspace.
+
 ## Running these examples
 
 These notebooks are designed to show how changes can processed from a Delta Table/Unity Catalog/Hive Metastore source in a Databricks workspace. You can adjust the source tables to meet any data sources you want to try this with. You should also make sure you have the following set up:
